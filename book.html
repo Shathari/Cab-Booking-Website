@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Now</title>
+    <link rel="stylesheet" href="cabride.css">
+    <style>
+        /* Additional styles can be added here if needed */
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <header class="header">
+            <div class="navbar">
+                <a href="index.html">HOME</a>
+                <a href="info.html">ABOUT</a>
+                <a href="explore.html">EXPLORE</a>
+                <a href="book.html" class="active">BOOKNOW</a>
+            </div>
+            <div id="menu-bars">&#9776;</div>
+        </header>
+
+        <div class="booking-form">
+            <h1>Calculate Fare</h1>
+            <form id="fareForm">
+                <label for="fromCity">From City:</label>
+                <select id="fromCity" name="fromCity" required>
+                    <option value="">Select City</option>
+                    <option value="delhi">delhi</option>
+                    <option value="gurugram">gurugram</option>
+                    <option value="ghaziabad">ghaziabad</option>
+                    <option value="greator noida">grator noida</option>
+                </select>
+                
+                <label for="toCity">To City:</label>
+                <select id="toCity" name="toCity" required>
+                    <option value="">Select City</option>
+                    <option value="delhi">delhi</option>
+                    <option value="gurugram">gurugram</option>
+                    <option value="ghaziabad">ghaziabad</option>
+                    <option value="greator noida">grator noida</option>
+                </select>
+                
+                <label for="cabType">Select Cab Type:</label>
+                <select id="cabType" name="cabType" required>
+                    <option value="">Select Cab</option>
+                    <option value="Standard">Standard</option>
+                    <option value="Premium">Premium</option>
+                    <option value="Luxury">Luxury</option>
+                </select>
+                
+                <!-- Hidden input for costPerKm, value will be set dynamically -->
+                <input type="hidden" id="costPerKm" name="costPerKm" required>
+                
+                <button type="submit">Calculate Fare</button>
+            </form>
+            
+            <div id="fareResult" style="display: none;">
+                <h2>Estimated Fare:</h2>
+                <p id="fareAmount"></p>
+            </div>
+            <div class="confirm-button">
+                <button class="confirm"><a href="confirm.html">confirmation</a></button>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>

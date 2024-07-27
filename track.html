@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cab Tracking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7e309;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        h1 {
+            margin-top: 0;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #ff6a00;
+            border: none;
+            color: #fff;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .result {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .cancel-button {
+            background-color: #dc3545;
+        }
+        .cancel-button:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Track Your Cab</h1>
+        <div class="form-group">
+            <label for="bookingId">Booking ID:</label>
+            <input type="text" id="bookingId" placeholder="Enter your booking ID">
+        </div>
+        <button onclick="trackCab()">Track Cab</button>
+        <button class="cancel-button" onclick="cancelBooking()">Cancel Booking</button>
+        <div class="result" id="result"></div>
+    </div>
+    <script>
+        function trackCab() {
+            const bookingId = document.getElementById('bookingId').value;
+            const resultDiv = document.getElementById('result');
+
+            if (bookingId === "") {
+                resultDiv.innerHTML = "Please enter a booking ID.";
+                return;
+            }
+
+            // Simulating tracking cab with a static response
+            resultDiv.innerHTML = `Tracking cab for Booking ID: ${bookingId}<br>Status: On the way!`;
+        }
+
+        function cancelBooking() {
+            const bookingId = document.getElementById('bookingId').value;
+            const resultDiv = document.getElementById('result');
+
+            if (bookingId === "") {
+                resultDiv.innerHTML = "Please enter a booking ID.";
+                return;
+            }
+
+            // Simulating cancellation with a static response
+            resultDiv.innerHTML = `Booking ID: ${bookingId} has been cancelled.`;
+        }
+    </script>
+</body>
+</html>

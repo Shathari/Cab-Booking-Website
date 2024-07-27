@@ -1,0 +1,278 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5e609;
+    
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header.header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px; /* Adjusted logo size */
+}
+
+.navbar {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.navbar a.active,
+.navbar a:hover {
+    background-color: #444;
+}
+
+#menu-bars {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        width: 100%;
+    }
+
+    .navbar a {
+        text-align: center;
+        padding: 15px;
+        border-bottom: 1px solid #444;
+    }
+
+    #menu-bars {
+        display: block;
+    }
+}
+
+.home-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.home-content {
+    flex: 1;
+    padding: 20px;
+    text-align: center; /* Centered content */
+}
+
+.inner-content h3,
+.inner-content h2,
+.inner-content p {
+    margin: 0 0 20px 0;
+}
+
+.taxi-image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.center-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.booknow {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff8000;
+    color: #fff;
+    text-decoration:solid;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.booknow:hover {
+    background-color: #b37700;
+}
+
+.fast-booking {
+    padding: 20px 0;
+}
+
+.fast-heading {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.inner-fast {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.booking-content {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.icon-fast {
+    margin-right: 10px;
+    font-size: 24px;
+    color: #ffff;
+}
+
+.inner-fast-text h1 {
+    margin: 0 0 10px 0;
+}
+
+/* Tariff Section Styles */
+.main-tariff {
+    padding: 20px 0;
+}
+
+.inner-tariff {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.tariff-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+}
+
+.tariff-container img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.tariff-container h2 {
+    margin: 10px 0;
+}
+
+/* FAQ Section Styles */
+.some-faqs {
+    padding: 20px 0;
+}
+
+.main-faqs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.faqs {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Booking Form Styles */
+.booking-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.booking-form h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.booking-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.booking-form select,
+.booking-form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.booking-form button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.booking-form button:hover {
+    background-color: #0056b3;
+}
+
+#fareResult {
+    margin-top: 20px;
+    background: #e0ffe0;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .home-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .inner-tariff {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tariff-container {
+        width: 100%;
+    }
+
+    .inner-fast {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .booking-content {
+        width: 100%;
+    }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation Page</title>
+    <link rel="stylesheet" href="cabride.css">
+</head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f708;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    
+        #confirmation {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h2 {
+            color: #333;
+        }
+        p {
+            color: #555;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        .track-button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .track-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+<head>
+<body>
+    <div class="main-container">
+    <div id="confirmation">
+        <h2>Confirmation Message</h2>
+        <p>Your registration is confirmed!</p>
+        <p>booking id: <span id="confirmation-code">AB23Cfrgvh</span></p>
+        <div class="button-container">
+            <a href="track.html" class="track-button">Track</a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Assume the confirmation code is passed as a query parameter 'code'
+            const urlParams = new URLSearchParams(window.location.search);
+            const confirmationCode = urlParams.get('code') || 'AB23Cfrgvh'; // Default code if none is provided
+            
+            // Update the confirmation code element with the actual code
+            document.getElementById('confirmation-code').textContent = confirmationCode;
+        });
+    </script>
+</body>
+</html>
